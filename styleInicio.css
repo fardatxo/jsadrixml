@@ -1,0 +1,399 @@
+/* Estilos globales */
+body {
+  background-color: #ffffffc4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url("adrián morales.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;
+  height: 150px; 
+  width: 100%;
+  padding: 15px 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; 
+}
+
+/* Estilo para la barra de navegación */
+nav {
+  background-color: rgb(236, 245, 235);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+nav a:hover {
+  background-color: #d3d3d3;
+}
+
+/* Estilo para el contenedor */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Estilos para las secciones */
+.seccion {
+  background-color: #f4f4f435;
+  width: 45%;
+  height: 500px;
+  display: block;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: larger;
+  padding-left: 20px;
+}
+
+/* Contenido dentro de las secciones */
+.contenido {
+  padding-right: 50%;
+  padding-left: 20px;
+  padding-bottom: 50px;
+  width: 50%;
+  top: -25px;
+}
+
+/* Estilos para las imágenes */
+img {
+  float: right;
+  padding-right: 60px;
+  width: 250px;
+  height: 300px;
+  position: relative;
+  top: -230px;
+}
+
+.imgF {
+  left: 30px;
+  top: -220px;
+  left: 190px;
+}
+
+.imgT {
+  width: 40%;
+  height: 40%;
+  left: 30px;
+  top: -290px;
+}
+
+.imgR {
+  width: 45%;
+  left: 50px;
+  top: -310px;
+}
+
+.imgS {
+  width: 40%;
+  height: 40%;
+  left: 190px;
+  top: -280px;
+}
+
+/* Estilos para el pie de página */
+footer {
+  clear: both;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Hacer que las imágenes no se desborden */
+img {
+  max-width: 100%;
+}
+
+/* Estilos para las tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid gray;
+  text-align: center;
+}
+
+th {
+  background-color: #ddd;
+}
+
+/* Estilos para el botón en la parte superior */
+.btn-oscuro {
+  position: fixed;
+  top: 10px; /* Ajusta la distancia desde la parte superior de la página */
+  right: 83%;
+  transform: translateX(-50%); /* Centra el botón en la pantalla */
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con algo de transparencia */
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+
+.btn-oscuro:hover {
+  background-color: #333; /* Cambia el color a un tono más oscuro cuando se pasa el ratón */
+}
+
+/* Estilo para el reloj en la parte superior derecha */
+#reloj {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: white;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+  padding: 10px;
+  border-radius: 3px;
+  z-index: 1000; /* Asegura que el reloj esté encima de otros elementos */
+  text-align: right;
+}
+/* Asegúrate de que las imágenes sean visibles y tengan un tamaño base */
+.contenedor-imagen img,
+.seccion img {
+    width: 200px; /* Tamaño inicial fijo (ajústalo según necesites) */
+    height: auto; /* Mantiene la proporción */
+    transition: transform 0.3s ease; /* Efecto suave al hacer hover */
+    margin: 10px; /* Espacio alrededor para que no se solapen */
+    display: block; /* Evita espacios raros debajo de la imagen */
+}
+
+/* Solo aplica el hover si quieres que todas las imágenes lo tengan */
+.contenedor-imagen img:hover,
+.seccion img:hover {
+    transform: scale(1.1); /* Crecimiento del 10% */
+}
+
+/* Opcional: Si usas contenedores, asegúrate de que no recorten las imágenes */
+.contenedor-imagen {
+    min-height: 150px; /* Altura mínima para que no colapse */
+    display: flex;
+    align-items: center; /* Centra la imagen verticalmente */
+    justify-content: center; /* Centra la imagen horizontalmente */
+}
+
+/* Añade esto a tu CSS existente */
+
+/* Transiciones para las secciones */
+.seccion {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); /* Efecto suave con curva personalizada */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); /* Sombra inicial */
+  transform: translateY(0); /* Posición inicial */
+  opacity: 0.95; /* Ligera transparencia */
+  border-radius: 8px; /* Esquinas redondeadas */
+  overflow: hidden; /* Para que el borde radius funcione */
+}
+
+.seccion:hover {
+  transform: translateY(-5px) scale(1.01); /* Elevación y ligero zoom */
+  box-shadow: 0 14px 28px rgba(0,0,0,0.15), 0 10px 10px rgba(0,0,0,0.12); /* Sombra más pronunciada */
+  opacity: 1; /* Sin transparencia al hacer hover */
+  background-color: #f4f4f4; /* Cambio de color de fondo */
+  border: 1px solid rgba(0,0,0,0.1); /* Borde más suave */
+}
+
+/* Efecto de "flotación" para todas las secciones al cargar la página */
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 0.95;
+    transform: translateY(0);
+  }
+}
+
+.seccion {
+  animation: floatIn 0.6s ease-out forwards;
+}
+
+/* Retraso escalonado para cada sección */
+.seccion:nth-child(1) { animation-delay: 0.1s; }
+.seccion:nth-child(2) { animation-delay: 0.2s; }
+.seccion:nth-child(3) { animation-delay: 0.3s; }
+.seccion:nth-child(4) { animation-delay: 0.4s; }
+
+/* Efecto de borde inferior al hacer hover */
+.seccion::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  transition: width 0.3s ease;
+}
+
+.seccion:hover::after {
+  width: 100%;
+}
+
+/* Transición para el contenido interno */
+.contenido {
+  transition: color 0.3s ease;
+}
+
+.seccion:hover .contenido {
+  color: #333; /* Color más oscuro al hacer hover */
+}
+
+/* Transición para los títulos */
+h5 {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.seccion:hover h5 {
+  color: #4b6cb7; /* Cambio de color al hacer hover */
+  padding-left: 30px; /* Efecto de desplazamiento */
+}
+
+.seccion:hover h5::before {
+  content: '→';
+  position: absolute;
+  left: 10px;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+/* ---- REEMPLAZA LOS ESTILOS ACTUALES DE TU NAV Y NAV A ---- */
+nav {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  padding: 15px 0;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 255, 255, 0.4), 
+    transparent);
+  transition: 0.5s;
+}
+
+nav:hover::before {
+  left: 100%;
+}
+
+nav a {
+  color: cyan;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    #ff0000, #ff7300, #fffb00, #48ff00, 
+    #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+nav a:hover {
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.6);
+  animation: rainbow 0.5s linear infinite;
+}
+
+nav a:hover::before {
+  opacity: 1;
+  animation: rainbowBG 8s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { text-shadow: 0 0 5px #ff0000; }
+  14% { text-shadow: 0 0 5px #ff7300; }
+  28% { text-shadow: 0 0 5px #fffb00; }
+  42% { text-shadow: 0 0 5px #48ff00; }
+  57% { text-shadow: 0 0 5px #00ffd5; }
+  71% { text-shadow: 0 0 5px #002bff; }
+  85% { text-shadow: 0 0 5px #7a00ff; }
+  100% { text-shadow: 0 0 5px #ff00c8; }
+}
+
+@keyframes rainbowBG {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* Efecto de "explosión" al hacer clic */
+nav a:active {
+  transform: scale(1.5);
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #fff, 
+              0 0 40px #fff, 
+              0 0 60px #fff;
+  transition: all 0.1s;
+}
+
+/* Animación para las secciones */
+.seccion {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Opcional: Añade un pequeño delay a cada sección para un efecto escalonado */
+.seccion:nth-child(1) { transition-delay: 0.1s; }
+.seccion:nth-child(2) { transition-delay: 0.2s; }
+.seccion:nth-child(3) { transition-delay: 0.3s; }
+.seccion:nth-child(4) { transition-delay: 0.4s; }

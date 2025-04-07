@@ -1,0 +1,236 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url(https://img.freepik.com/vector-premium/fondo-estetico-color-suave-textura-hojas_966734-73.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Asegura que el cuerpo tenga al menos la altura de la pantalla */
+}
+header {
+  background-image: url("adrián morales.png"); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  color: white;
+  height: 150px; 
+  width: 100%;
+  padding: 15px 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center; 
+}
+
+/* Estilo para la barra de navegación */
+nav {
+  background-color: rgb(236, 245, 235);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+nav a:hover {
+  background-color: #d3d3d3;
+}
+/* Contenedor principal para centrar el contenido y empujar el footer */
+.main-container {
+  flex: 1; /* Permite que este contenedor crezca y ocupe el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Espacio alrededor para evitar que se vea pegado a los bordes */
+}
+
+h1 {
+  text-align: left;
+  color: #000;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #000;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea,
+select {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+input[type="file"] {
+  width: auto;
+}
+
+input[type="checkbox"] {
+  align-items: normal;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.centered {
+  text-align: center;
+}
+
+/* Estilos para el formulario */
+.form1 {
+  width: 60%;
+  max-width: 600px; /* Evita que se haga muy grande en pantallas anchas */
+  background-color: #f4a460;
+  padding: 20px;
+  border: 2px solid #000;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para mejor apariencia */
+}
+
+/* Estilos para el footer */
+.ano {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+/* ---- REEMPLAZA LOS ESTILOS ACTUALES DE TU NAV Y NAV A ---- */
+nav {
+  background: linear-gradient(90deg, #000000, #1a1a1a);
+  padding: 15px 0;
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(0, 255, 255, 0.4), 
+    transparent);
+  transition: 0.5s;
+}
+
+nav:hover::before {
+  left: 100%;
+}
+
+nav a {
+  color: cyan;
+  text-decoration: none;
+  padding: 12px 25px;
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, 
+    #ff0000, #ff7300, #fffb00, #48ff00, 
+    #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  background-size: 400%;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: -1;
+  filter: blur(5px);
+}
+
+nav a:hover {
+  color: #000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.6);
+  animation: rainbow 0.5s linear infinite;
+}
+
+nav a:hover::before {
+  opacity: 1;
+  animation: rainbowBG 8s linear infinite;
+}
+
+@keyframes rainbow {
+  0% { text-shadow: 0 0 5px #ff0000; }
+  14% { text-shadow: 0 0 5px #ff7300; }
+  28% { text-shadow: 0 0 5px #fffb00; }
+  42% { text-shadow: 0 0 5px #48ff00; }
+  57% { text-shadow: 0 0 5px #00ffd5; }
+  71% { text-shadow: 0 0 5px #002bff; }
+  85% { text-shadow: 0 0 5px #7a00ff; }
+  100% { text-shadow: 0 0 5px #ff00c8; }
+}
+
+@keyframes rainbowBG {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* Efecto de "explosión" al hacer clic */
+nav a:active {
+  transform: scale(1.5);
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 20px #fff, 
+              0 0 40px #fff, 
+              0 0 60px #fff;
+  transition: all 0.1s;
+}
+
+/* Animación para las secciones */
+.seccion {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease-out;
+}
+
+.seccion.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Opcional: Añade un pequeño delay a cada sección para un efecto escalonado */
+.seccion:nth-child(1) { transition-delay: 0.1s; }
+.seccion:nth-child(2) { transition-delay: 0.2s; }
+.seccion:nth-child(3) { transition-delay: 0.3s; }
+.seccion:nth-child(4) { transition-delay: 0.4s; }

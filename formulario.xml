@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formulario>
+  <titulo>Formulario de alta de usuario</titulo>
+  <campos>
+    <campo>
+      <etiqueta colspan="2" clase="centered">Identificador de nuevo usuario</etiqueta>
+      <input type="text" id="identificador" value="usu_012345" readonly="true" colspan="2"/>
+    </campo>
+    <campo>
+      <etiqueta>Nombre:</etiqueta>
+      <input type="text" id="nombre" name="nombre" required="true"/>
+      <etiqueta>Apellidos:</etiqueta>
+      <input type="text" id="apellidos" name="apellidos" required="true"/>
+    </campo>
+    <campo>
+      <etiqueta>Contraseña:</etiqueta>
+      <input type="password" id="contrasena" name="contrasena" required="true"/>
+      <etiqueta>Confirmar contraseña:</etiqueta>
+      <input type="password" id="confirmar_contrasena" name="confirmar_contrasena" required="true"/>
+    </campo>
+    <campo>
+      <etiqueta>Email:</etiqueta>
+      <input type="email" id="email" name="email" required="true" colspan="3"/>
+    </campo>
+    <campo>
+      <etiqueta>Sexo:</etiqueta>
+      <opciones colspan="3">
+        <opcion>
+          <input type="radio" id="hombre" name="sexo" value="hombre"/>
+          <label>Hombre</label>
+        </opcion>
+        <opcion>
+          <input type="radio" id="mujer" name="sexo" value="mujer" checked="true"/>
+          <label>Mujer</label>
+        </opcion>
+      </opciones>
+    </campo>
+    <campo>
+      <etiqueta>Aficiones:</etiqueta>
+      <opciones colspan="3">
+        <opcion>
+          <input type="checkbox" id="deportes" name="aficiones" value="deportes"/>
+          <label>Deportes</label>
+        </opcion>
+        <opcion>
+          <input type="checkbox" id="lectura" name="aficiones" value="lectura" checked="true"/>
+          <label>Lectura</label>
+        </opcion>
+        <opcion>
+          <input type="checkbox" id="cine" name="aficiones" value="cine"/>
+          <label>Cine</label>
+        </opcion>
+      </opciones>
+    </campo>
+    <campo>
+      <etiqueta>País:</etiqueta>
+      <select id="pais" name="pais" colspan="3">
+        <option value="españa">España</option>
+        <option value="francia">Francia</option>
+        <option value="portugal">Portugal</option>
+      </select>
+    </campo>
+    <campo>
+      <etiqueta>Subir su foto:</etiqueta>
+      <input type="file" id="foto" name="foto" colspan="3"/>
+    </campo>
+    <campo>
+      <etiqueta>Comentarios personales:</etiqueta>
+      <textarea id="comentarios" name="comentarios" rows="5" cols="40" placeholder="Escriba aquí sus comentarios" colspan="3"></textarea>
+    </campo>
+  </campos>
+  <botones>
+    <boton type="reset" colspan="2" clase="centered">Resetear</boton>
+    <boton type="submit" colspan="2" clase="centered">Enviar</boton>
+  </botones>
+</formulario>
